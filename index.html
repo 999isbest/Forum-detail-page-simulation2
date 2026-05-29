@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鸣屿论坛 - 刷帖感想</title>
+    <title>SWU校园论坛-校友发帖</title>
     <style>
         /* 全局样式重置 */
         * {
@@ -161,17 +161,18 @@
             overflow: hidden;
         }
 
-        /* 图片轮播区 */
+        /* 图片轮播区 - 缩小高度、适配原图比例 */
         .image-carousel {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: auto;
+            max-height: 450px;
             overflow: hidden;
         }
 
         .carousel-item {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -180,8 +181,8 @@
 
         .carousel-img {
             width: 100%;
-            height: 100%;
-            object-fit: contain; /* 保证图片完整显示 */
+            height: auto;
+            object-fit: contain; /* 完整展示原图、不变形 */
             background: #f8f8f8;
         }
 
@@ -217,22 +218,6 @@
 
         .next-btn {
             right: 10px;
-        }
-
-        /* 帖子内容区 */
-        .post-content {
-            padding: 20px;
-        }
-
-        .post-body {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--text-main);
-            margin-bottom: 20px;
-        }
-
-        .post-body p {
-            margin-bottom: 15px;
         }
 
         /* 右侧互动区：仅保留评论区，移除相关推荐 */
@@ -506,13 +491,13 @@
                 grid-template-columns: 1fr;
             }
             .image-carousel {
-                height: 400px;
+                max-height: 400px;
             }
         }
 
         @media (max-width: 576px) {
             .image-carousel {
-                height: 300px;
+                max-height: 320px;
             }
             .post-body {
                 font-size: 14px;
@@ -552,8 +537,8 @@
     <nav class="navbar">
         <!-- Logo区域 -->
         <div class="logo">
-            <div class="logo-icon">鸣</div>
-            <div class="logo-text">鸣屿论坛</div>
+            <div class="logo-icon">S</div>
+            <div class="logo-text">SWU校园论坛</div>
         </div>
         <!-- 搜索框区域 -->
         <div class="search-container">
@@ -580,21 +565,15 @@
     <div class="container">
         <!-- 左侧核心内容展示区 -->
         <div class="content-main">
-            <!-- 新增：帖子标题 -->
-            <div class="post-title">刷帖感想</div>
+            <!-- 帖子标题 移到图片上方 -->
+            <div class="post-title"></div>
 
             <div class="image-carousel">
                 <button class="carousel-btn prev-btn">&lt;</button>
-                <!-- 替换为新的"刷帖感想"图片 -->
                 <div class="carousel-item">
-                    <img src="https://i.imgs.ovh/2026/02/07/ydQ16O.jpeg" alt="刷帖感想" class="carousel-img">
+                    <img src="https://a1.qpic.cn/psc?/V53zoWUe0Df2Te0Cu8wC105f3x2tw7hm/TmEUgtj9EK6.7V8ajmQrEPQwoN9X3iM3Kv7kWZFY48u6X3AP5RjM952mgfcbwSQmcMk4Uv6mSepQMPkJXIPQatPUToBprA3s0Qefjm9Yg3E!/b&ek=1&kp=1&pt=0&bo=oAXyAqAF8gIBFzA!&tl=3&vuin=2521700086&tm=1780070400&dis_t=1780073180&dis_k=b0c6098655973ad5be5ecbaa6c13f7c3&sce=60-2-2&rf=viewer_4" alt="校友发帖" class="carousel-img">
                 </div>
                 <button class="carousel-btn next-btn">&gt;</button>
-            </div>
-            <div class="post-content">
-                <div class="post-body">
-                    <p>很正常。我就是那么绝情、刻薄、寡淡，经历的多了, 看的也就开了。不会因为别人随便一个评价而扰乱自我的。越靠近我的人越能感觉到锋利和寒冷, 就像北极的冰块坠落砸到身上一样。我终究就像龙卷风一样, 破坏完之后又悄然消失。没人可以参破我。待到宇宙尽 头, 我依然坦然自得。我的心在我手上 亲眼碎掉, 遏制不住的黑暗随后便涌现出来。越是孤独我就越想破坏, 像推土机一样碾平我能见到的所有高处。如果有什么能形容我的话, 就是宇宙的暗质吧。是我推动宇宙的膨胀, 是我牺牲自己的光亮衬托别人。</p>
-                </div>
             </div>
         </div>
 
@@ -634,14 +613,14 @@
                         <div class="comment-content">
                             <!-- 新增高亮样式和点击事件 -->
                             <div class="highlight-comment" onclick="showModal('网友借“参考文献”梗嘲讽发帖者')">
-                                震撼首发！！！很久没有看见这么矫情的发言了！
+                                参考文献呢？震撼首发！！！🤫
                             </div>
                         </div>
                         <div class="comment-replies">
                             <div class="reply-item">
                                 <img src="https://picsum.photos/seed/comment3/32/32" alt="头像" class="avatar">
                                 <div class="reply-content">
-                                    <span class="reply-at">网络冲浪选手</span> 回复 ：很正常。我就是那么绝情、刻薄、寡淡
+                                    <span class="reply-at">网络冲浪选手</span> 回复 ：数学建模/统计建模双省一很厉害吗❓😎😎😎英语六级520分很厉害吗❓🤓🤓🤓如果真的很厉害😤😤😤为什么从我出生到现在😩除了我妈😡，从来没有女生喜欢我？？？？？？😱😱😱我已经20岁了🤬🤬🤬明明比全世界99%以上的男生👨👨👨都笨吧😩😩😩
                                 </div>
                             </div>
                         </div>
@@ -659,15 +638,14 @@
                         <div class="comment-content">
                             <!-- 新增高亮样式和点击事件 -->
                             <div class="highlight-comment" onclick="showModal('梗表达被滥用于普通用户的日常分享下')">
-                                很正常😔 我就是那么绝情、刻薄、寡淡😶 经历的多了🤯看的也就开了🚬 不会因为别人随便一个评价而扰乱自我的😏 越靠近我的人😍越能感觉到锋利和赛冷🥶 就像北极的冰块坠落🧊砸到身上一样🤕 我终究就像龙卷风一样🌪️破坏完之后又悄然消失😈 没人可以参破我😏 待到宇宙尽 头🌍我依然坦然自得😌 我的心在我手上🤲 亲眼碎掉💔遏制不住的黑暗🖤随后便涌现出来😡 越是孤独我就越想破坏😞像推土机一样🚜碾平我能见到的所有高处👊 如果有什么能形容我的话👁️ 就是宇宙的暗质吧🧬是我推动宇宙的膨胀🤗是我牺牲自己的光亮衬托别人😇
-                            </div>
+                                体测坐位体前屈-13.4厘米很厉害吗❓😎😎😎英语四级395分很厉害吗❓🤓🤓🤓如果真的很厉害😤😤😤为什么从我出生到现在😩除了我爸😡，从来没有男生喜欢我？？？？？？😱😱😱我已经20岁了🤬🤬🤬明明比全世界99%以上的女生👨👨👨都笨吧😩😩😩
                         </div>
                         <div class="comment-replies">
                             <div class="reply-item">
                                 <!-- 修改：更换为其他用户头像，移除发帖者标识 -->
                                 <img src="https://picsum.photos/seed/replyuser/32/32" alt="头像" class="avatar">
                                 <div class="reply-content">
-                                    <span class="reply-at">热心网友</span>：参考文献[1]：很正常。我就是那么绝情、刻薄、寡淡
+                                    <span class="reply-at">热心网友</span>：参考文献：«数学建模/统计建模双省一很厉害吗»「Z」，西南大学论坛，2025年11月11日（重庆）
                                 </div>
                             </div>
                             <div class="reply-item">
@@ -689,7 +667,7 @@
                             </div>
                             <span class="comment-time">1小时前</span>
                         </div>
-                        <div class="comment-content">看起来像是我写小作文的时候会说出来的话，汗流浃背了</div>
+                        <div class="comment-content">但是这些条件跟感情的关系在哪里呢</div>
                     </div>
 
                     <!-- 评论4：一脸懵圈（原第四条） -->
@@ -713,27 +691,27 @@
                             </div>
                             <span class="comment-time">30分钟前</span>
                         </div>
-                        <div class="comment-content">帖主只是正常发表一下自己的感想，有必要追着阴阳怪气吗？</div>
+                        <div class="comment-content">帖主只是日常发表一下自己的想法，有必要追着阴阳怪气吗？</div>
                         <div class="comment-replies">
                             <div class="reply-item">
                                 <!-- 修改：漫游宇宙头像改为不同 -->
                                 <img src="https://picsum.photos/seed/manyou/32/32" alt="头像" class="avatar">
                                 <div class="reply-content highlight-comment" onclick="showModal('群体的玩梗行为促使特定圈层的产生，吸引更多人加入玩梗行列')">
-                                    <span class="reply-at">漫游宇宙</span> 回复 <span class="reply-at">晴朗天空</span>：很正常。我就是那么绝情、刻薄、寡淡😏；
+                                    <span class="reply-at">漫游宇宙</span> 回复 <span class="reply-at">晴朗天空</span>：数学建模/统计建模双省一很厉害吗？；
                                 </div>
                             </div>
                             <div class="reply-item">
                                 <!-- 修改：不爱吃香菜头像改为不同 -->
-                                <img src="https://picsum.photos/seed/xiangcai/32/32" alt="头像" class="avatar">
+                                <img src="https://picsum.photos/seed/xiangcai/32/32" alt="avatar">
                                 <div class="reply-content">
-                                    <span class="reply-at">不爱吃香菜</span> 回复 <span class="reply-at">晴朗天空</span>：很正常。我就是那么绝情、刻薄、寡淡😏；
+                                    <span class="reply-at">不爱吃香菜</span> 回复 <span class="reply-at">晴朗天空</span>：英语六级520分很厉害吗？😜；
                                 </div>
                             </div>
                             <div class="reply-item">
                                 <!-- 修改：超人强头像改为不同 -->
-                                <img src="https://picsum.photos/seed/chaoren/32/32" alt="头像" class="avatar">
+                                <img src="https://picsum.photos/seed/chaoren/32/32" alt="avatar">
                                 <div class="reply-content">
-                                    <span class="reply-at">超人强</span> 回复 <span class="reply-at">晴朗天空</span>：很正常。我就是那么绝情、刻薄、寡淡😏；
+                                    <span class="reply-at">超人强</span> 回复 <span class="reply-at">晴朗天空</span>：数学建模/统计建模双省一很厉害吗？；
                                 </div>
                             </div>
                         </div>
@@ -742,7 +720,7 @@
                     <!-- 评论6：吃瓜群众（原第六条） -->
                     <div class="comment-item">
                         <div class="comment-header">
-                            <img src="https://picsum.photos/seed/comment6/32/32" alt="头像" class="avatar">
+                            <img src="https://picsum.photos/seed/comment6/32/32" alt="avatar">
                             <div class="comment-author-box">
                                 <span class="comment-author">吃瓜群众</span>
                             </div>
@@ -752,9 +730,9 @@
                         <div class="comment-replies">
                             <div class="reply-item">
                                 <!-- 修改：凉拌草莓头像改为不同 -->
-                                <img src="https://picsum.photos/seed/caomei/32/32" alt="头像" class="avatar">
+                                <img src="https://picsum.photos/seed/caomei/32/32" alt="avatar">
                                 <div class="reply-content">
-                                    <span class="reply-at">凉拌草莓</span> 回复 <span class="reply-at">吃瓜群众</span>：何意味？帖主矫情病发作了？
+                                    <span class="reply-at">凉拌草莓</span> 回复 <span class="reply-at">吃瓜群众</span>：何意味？？？
                                 </div>
                             </div>
                         </div>
@@ -797,7 +775,7 @@
         window.onload = function() {
             console.log('页面完全加载完成');
 
-            // 移除搜索框推荐功能（样式已隐藏，这里移除相关事件）
+            // 移除搜索框推荐功能（样式已隐藏，这里移除相关事件绑定）
             const searchInput = document.getElementById('searchInput');
             const searchSuggestions = document.getElementById('searchSuggestions');
             // 清空搜索框相关事件绑定
@@ -926,4 +904,4 @@
         };
     </script>
 </body>
-
+</html>
